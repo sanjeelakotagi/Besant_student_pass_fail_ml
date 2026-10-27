@@ -5,7 +5,7 @@ st.title("�� Student Pass/Fail Predictor")
 st.write("Enter the number of hours studied.")
 # Load the saved ML model
 with open("Besant_student_model.pkl", "rb") as file:
-model = pickle.load(file)
+   model = pickle.load(file)
 # Take input from the user
 hours = st.number_input(
 "Study hours",
