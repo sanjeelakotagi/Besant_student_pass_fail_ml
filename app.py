@@ -20,16 +20,16 @@ if st.button("Predict Result"):
    probability = model.predict_proba([[hours]])[0]
 
 # Probability of Pass (class 1)
-pass_probability = probability[1]
+  pass_probability = probability[1]
 # Decision threshold
-threshold = 0.5
+  threshold = 0.5
 # Apply threshold to decide Pass or Fail
 if pass_probability>= threshold:
-st.success("Prediction: Pass")
-predicted_confidence = pass_probability
+   st.success("Prediction: Pass")
+   predicted_confidence = pass_probability
 else:
-st.error("Prediction: Fail")
-predicted_confidence = probability[0]
+   st.error("Prediction: Fail")
+   predicted_confidence = probability[0]
 # Display probabilities and threshold
 st.write(f"Pass probability: {pass_probability * 100:.2f}%")
 st.write(f"Fail probability: {probability[0] * 100:.2f}%")
