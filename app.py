@@ -17,7 +17,7 @@ step=0.5
 # Predict when the button is clicked
 if st.button("Predict Result"):
 # Get probabilities for both classes
-probability = model.predict_proba([[hours]])[0]
+   probability = model.predict_proba([[hours]])[0]
 
 # Probability of Pass (class 1)
 pass_probability = probability[1]
